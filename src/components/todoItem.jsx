@@ -17,8 +17,8 @@
             <div className="card card-inverse card-success mb-3 text-center ">
             <div className="card-block">
                 <p id="tmp"><h2><strong>{this.props.todoItem.text}</strong></h2> </p>
-                <footer>  <a href="#"onClick={this.editTodo.bind(this, this.props.todoItem.id, this.props.todoItem.priority, this.props.todoItem.text)}><span className="glyphicon glyphicon-pencil"></span></a>
-                   <a href="#"onClick = {this.deleteTodo.bind(this,this.props.todoItem.id)}> <span className="glyphicon glyphicon-remove"></span></a>
+                <footer>  <a id="edit-link" href="#edit-link"onClick={this.editTodo.bind(this, this.props.todoItem.id, this.props.todoItem.priority, this.props.todoItem.text)}><span className="glyphicon glyphicon-pencil"></span></a>
+                   <a id="delete-link"href="#delete-link"onClick = {this.deleteTodo.bind(this,this.props.todoItem.id)}> <span className="glyphicon glyphicon-remove"></span></a>
               </footer>
             </div>
           </div>
@@ -29,8 +29,8 @@
             <div className="card card-inverse card-warning mb-3 text-center">
             <div className="card-block">
                 <p id="tmp"><h2><strong>{this.props.todoItem.text} </strong></h2></p>
-                <footer>  <a href="#"onClick={this.editTodo.bind(this, this.props.todoItem.id, this.props.todoItem.priority, this.props.todoItem.text)}><span className="glyphicon glyphicon-pencil"></span></a>
-                   <a href="#"onClick = {this.deleteTodo.bind(this,this.props.todoItem.id)}> <span className="glyphicon glyphicon-remove"></span></a>
+                <footer>  <a id="edit-link" href="#edit-link"onClick={this.editTodo.bind(this, this.props.todoItem.id, this.props.todoItem.priority, this.props.todoItem.text)}><span className="glyphicon glyphicon-pencil"></span></a>
+                   <a id="delete-link"href="#delete-link"onClick = {this.deleteTodo.bind(this,this.props.todoItem.id)}> <span className="glyphicon glyphicon-remove"></span></a>
               </footer>
             </div>
           </div>
@@ -42,8 +42,8 @@
          <div className="card card-inverse card-danger mb-3 text-center">
             <div className="card-block">
                 <p id="tmp"><h2><strong>{this.props.todoItem.text}</strong></h2> </p>
-                <footer>  <a href="#"onClick={this.editTodo.bind(this, this.props.todoItem.id, this.props.todoItem.priority, this.props.todoItem.text)}><span className="glyphicon glyphicon-pencil"></span></a>
-                   <a href="#"onClick = {this.deleteTodo.bind(this,this.props.todoItem.id)}> <span className="glyphicon glyphicon-remove"></span></a>
+                <footer>  <a id="edit-link" href="#edit-link"onClick={this.editTodo.bind(this, this.props.todoItem.id, this.props.todoItem.priority, this.props.todoItem.text)}><span className="glyphicon glyphicon-pencil"></span></a>
+                   <a id="delete-link"href="#delete-link"onClick = {this.deleteTodo.bind(this,this.props.todoItem.id)}> <span className="glyphicon glyphicon-remove"></span></a>
               </footer>
             </div>
           </div>

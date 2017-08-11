@@ -44,12 +44,12 @@
          <form onSubmit={this.handleSubmit}>
            <div className="form-group">
              <label for="editText"> Edit Your Text: </label>
-              ​<textarea id="editText" className='form-control' onChange= {this.handleChange} placeholder={this.props.editedTodo.text}value = {this.state.text}  rows="7" cols="35" name ="text" />
+              ​<textarea id="edit-description" className='form-control' onChange= {this.handleChange} placeholder={this.props.editedTodo.text}value = {this.state.text}  rows="7" cols="35" name ="text" />
 
            </div>
            <div className="form-group">
              <label for="priority">Priority Of Task: </label>
-             <select className="custom-select"value = {this.state.priority} onChange= {this.handleChange} name ="priority">
+             <select id="edit-priority"className="custom-select"value = {this.state.priority} onChange= {this.handleChange} name ="priority">
                <option value="lite">Lite-Priority</option>
                <option value="urgent">Urgent-Priority</option>
                <option value="major">Major-Priority</option>

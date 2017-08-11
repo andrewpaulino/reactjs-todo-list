@@ -78,7 +78,7 @@ class App extends Component {
                   <form onSubmit = {this.handleSubmit} >
                     <div className="form-group">
                       <label for="newTodo">Your Task: </label>
-                        ​<textarea className='form-control' id="newTodo"  onChange= {this.handleChange} value = {this.state.text} rows="7" cols="35" name ="text" />
+                        ​<textarea className='form-control todoText' id="newTodo"  onChange= {this.handleChange} value = {this.state.text} rows="7" cols="35" name ="text" />
                     </div>
                     <div className="form-group">
                       <label for="priority">Priority Of Task: </label>
