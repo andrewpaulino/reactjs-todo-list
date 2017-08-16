@@ -7,8 +7,8 @@ class App extends Component {
     super(props);
     this.state = {
       TodoItems: [],
-      text: '',
-      priority: 'lite',
+      todoText: '',
+      todoPriority: '1',
       enableEditMode: false,
       editedTodo: null,
     };
@@ -29,8 +29,8 @@ class App extends Component {
 
   handleSubmit(event) {
     const todoListing = {
-      text: this.state.text,
-      priority: this.state.priority,
+      todoText: this.state.todoText,
+      todoPriority: this.state.todoPriority,
       id: this.state.TodoItems.length
     };
     this.setState({ TodoItems: [...this.state.TodoItems, todoListing] });
@@ -43,7 +43,7 @@ class App extends Component {
     TodoItems.splice(index, 1)
     this.setState({TodoItems: TodoItems})
   }
-  handleEditTodo(id,text,priority){
+  handleEditTodo(id,todoText,todoPriority){
     let TodoItems = this.state.TodoItems
     let index = TodoItems.findIndex(x => x.id === id);
     this.setState({editedTodo: TodoItems[index], enableEditMode: true})
@@ -75,21 +75,21 @@ class App extends Component {
                 <h3>Add Todo Task</h3></div>
               <div className="card-block">
                 <div className="card-text text-center">
-                  <form onSubmit = {this.handleSubmit} >
+                  <form onSubmit={this.handleSubmit} >
                     <div className="form-group">
                       <label for="newTodo">Your Task: </label>
-                        ​<textarea className='form-control todoText' id="newTodo"  onChange= {this.handleChange} value = {this.state.text} rows="7" cols="35" name ="text" />
+                        ​<textarea className='form-control todoText' id="newTodo"  onChange= {this.handleChange} value = {this.state.todoText} rows="7" cols="35" name ="todoText" />
                     </div>
                     <div className="form-group">
-                      <label for="priority">Priority Of Task: </label>
-                      <select className="custom-select" value = {this.state.priority} onChange= {this.handleChange} placeholder="Select A Priority" name ="priority">
-                        <option value="lite">Lite-Priority</option>
-                        <option value="urgent">Urgent-Priority</option>
-                        <option value="major">Major-Priority</option>
+                      <label for="todoPriority">Priority Of Task: </label>
+                      <select className="custom-select" value = {this.state.priority} onChange= {this.handleChange} placeholder="Select A Priority" name ="todoPriority">
+                        <option value="1">Lite-Priority</option>
+                        <option value="2">Urgent-Priority</option>
+                        <option value="3">Major-Priority</option>
                       </select>
                     </div>
                     <div className="form-group">
-                      <input type="Submit" className="btn btn-success text-center" value="Submit" />
+                      <button type="Submit" className="btn btn-success text-center" value="Submit">Submit </button>
                     </div>
                   </form>
                 </div>

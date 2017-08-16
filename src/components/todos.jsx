@@ -6,8 +6,8 @@ class todos extends Component {
   deleteTodo(id){
     this.props.onDelete(id)
   }
- editTodo(id,text,priority){
-    this.props.onEdit(id,text,priority)
+ editTodo(id,todoText,todoPriority){
+    this.props.onEdit(id,todoText,todoPriority)
   }
 
   render() {
