@@ -16,7 +16,7 @@
        todoTmp = (
             <div className="card card-inverse card-success mb-3 text-center ">
             <div className="card-block">
-                <p id="tmp"><h2><strong>{this.props.todoItem.todoText}</strong></h2> </p>
+                <li id="tmp"><h2><strong>{this.props.todoItem.todoText}</strong></h2> </li>
                 <footer>  <a id="edit-link" href="#edit-link"onClick={this.editTodo.bind(this, this.props.todoItem.id, this.props.todoItem.todoPriority, this.props.todoItem.todoText)}><span className="glyphicon glyphicon-pencil"></span></a>
                    <a id="delete-link"href="#delete-link"onClick = {this.deleteTodo.bind(this,this.props.todoItem.id)}> <span className="glyphicon glyphicon-remove"></span></a>
               </footer>
@@ -28,7 +28,7 @@
        todoTmp = (
             <div className="card card-inverse card-warning mb-3 text-center">
             <div className="card-block">
-                <p id="tmp"><h2><strong>{this.props.todoItem.todoText} </strong></h2></p>
+                <li id="tmp"><h2><strong>{this.props.todoItem.todoText} </strong></h2></li>
                 <footer>  <a id="edit-link" href="#edit-link"onClick={this.editTodo.bind(this, this.props.todoItem.id, this.props.todoItem.todoPriority, this.props.todoItem.todoText)}><span className="glyphicon glyphicon-pencil"></span></a>
                    <a id="delete-link"href="#delete-link"onClick = {this.deleteTodo.bind(this,this.props.todoItem.id)}> <span className="glyphicon glyphicon-remove"></span></a>
               </footer>
@@ -41,7 +41,7 @@
        todoTmp = (
          <div className="card card-inverse card-danger mb-3 text-center">
             <div className="card-block">
-                <p id="tmp"><h2><strong>{this.props.todoItem.todoText}</strong></h2> </p>
+                <li id="tmp"><h2><strong>{this.props.todoItem.todoText}</strong></h2> </li>
                 <footer>  <a id="edit-link" href="#edit-link"onClick={this.editTodo.bind(this, this.props.todoItem.id, this.props.todoItem.todoPriority, this.props.todoItem.todoText)}><span className="glyphicon glyphicon-pencil"></span></a>
                    <a id="delete-link"href="#delete-link"onClick = {this.deleteTodo.bind(this,this.props.todoItem.id)}> <span className="glyphicon glyphicon-remove"></span></a>
               </footer>

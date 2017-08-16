@@ -49,8 +49,8 @@ describe('express', () => {
     .wait(1000)
     .react.findAll('li')
     .then((component) => {
-      expect(component[0].props.todo.text).to.be.equal('ITEM');
-      expect(component[0].props.todo.priority).to.be.equal('1');
+      expect(component[0].props.todo.text).to.be.equal('ITEM'); // <=============== No Idea where these props are coming from or looking at but assuming they are coming from the main app component
+      expect(component[0].props.todo.priority).to.be.equal('1');// its hard to tell for what it should look for since I don't know whats been passed through.
     })
   ).timeout(12000)
 
@@ -80,7 +80,7 @@ describe('express', () => {
     .evaluate(() => document.querySelector('#edit-description').innerHTML)
     .end()
     .then((text) => {
-      expect(text).to.be.equal('ITEM');
+      expect(text).to.be.equal('ITEM');     // <======================================================== If Edited, why would it still equal Item????? as original entry was item?
     })
   ).timeout(12000)
 
@@ -99,7 +99,7 @@ describe('express', () => {
     .evaluate(() => document.querySelectorAll('li').length)
     .end()
     .then((length) => {
-      expect(length).to.be.equal(2);
+      expect(length).to.be.equal(2); //Should Equal since 2 were added and 1 was deleted.
     })
   ).timeout(12000)
 
